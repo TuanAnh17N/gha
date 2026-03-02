@@ -1,0 +1,14 @@
+name: Add Label
+
+on:
+  pull_request:
+
+jobs:
+  add-label:
+    runs-on: ubuntu-slim
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: ok-to-test
