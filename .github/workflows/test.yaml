@@ -13,6 +13,8 @@ jobs:
       - uses: gardener/cc-utils/.github/actions/trusted-checkout@master
       - shell: bash
         run: |
+          echo "Secret: ${{ secrets.FOO }}"
+          echo "Variable: ${{ vars.BAR }}"
           git log
           git status
           git show @
